@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/clientandsupportnavbar') %>
+        <div class="content_section">
+            <%- include('partials/supportnavbar') %>
+            <fieldset>
+                <legend>User details</legend>
+                <table>
+                    <tr>
+                        <th>_id</th>
+                        <th>firstName</th>
+                        <th>lastName</th>
+                        <th>email</th>
+                        <th>password</th>
+                        <th>address</th>
+                        <th>Date of Birth</th>
+                        <th>gender</th>
+                        <th>category</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=users._id%>
+                        </td>
+
+                        <td>
+                            <%=users.firstName%>
+                        </td>
+                    
+                        <td>
+                            <%=users.lastName%>
+                        </td>
+                    
+                        <td>
+                            <%=users.username%>
+                        </td>
+
+                        <td>
+                            <%=users.password%>
+                        </td>
+                        <td>
+                            <%=users.address%>
+                        </td>
+                        <td>
+                            <%=users.userDOB.toLocaleDateString()%>
+                        </td>
+                        <td>
+                            <%=users.gender%>
+                        </td>
+                    
+                        <td>
+                            <%=users.category%>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+</body>
+</html>

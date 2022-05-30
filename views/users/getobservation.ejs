@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/clientandsupportnavbar') %>
+        <div class="content_section">
+           <%- include('partials/clientnavbar') %>
+           <fieldset>
+            <fieldset>
+                <legend>Observation</legend>
+            
+                <%users.forEach(function(obj){%>
+                    <article class="observation">
+                        <h2><%=obj.title%></h2>
+                        <section>
+                            <p><%=obj.cordinates%></p>
+                        </section>
+
+                        <section>
+                           <p>Author: <%=obj.firstName%> <%=obj.lastName%></p>
+                        </section>
+
+
+                        <section>
+                            <p><img src='../../images/<%=obj.avatar%>' /></p>
+                            <!--<p>"../../../images/<%=obj.avatar%>"</p>-->
+                        </section>
+
+                        <section>
+                            <p><%=obj.content%></p>
+                        </section>
+                        <section>
+                            <p><%=obj.comments%></p>
+                        </section>
+                    </article>
+
+                <%})%>
+
+            
+            </fieldset>
+            
+        </fieldset>
+        </div>
+        <%- include('partials/footer') %>
+    </div>

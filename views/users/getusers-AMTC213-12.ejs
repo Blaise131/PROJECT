@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+   
+<body>
+    <div class="grid">
+        <%- include('partials/banner') %>
+        <%- include('partials/searchbox') %>
+        <%- include('partials/navbar2') %>
+        <div class="content_section">
+            <fieldset>
+                <legend>User details from database:</legend>
+                <table>
+                    <tr>
+                        <th>_id</th>
+                        <th>Forename</th>
+                        <th>Surname</th>
+                        <th>Number of Accounts</th>
+                        <th>Date of Birth</th>
+                        <th>ExecutiveAccountHolder</th>
+                    </tr>
+                    <%users.forEach(function(obj){%>
+                        <tr>
+                            <td><%=obj._id%></td>
+                            <td><%=obj.userforename%></td>
+                            <td><%=obj.usersurname%></td>
+                            <td><%=obj.userAccounts%></td>
+                            <td><%=obj.userDOB.toLocaleDateString()%></td>
+                            <td><%=obj.executiveAC%></td>
+                        </tr>
+                        <%})%>
+                    </table>
+                </fieldset>
+            </div>
+            <div class="footer_section">----</div>
+        </div>
+</body>
+</html>

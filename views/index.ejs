@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/headindex') %>
+  <body>
+    <div class="grid">
+      <%- include('partials/navbar') %>
+      <div class="content_section">
+        <!--Slideshow images for home page-->
+        <div class="w3-content w3-section" style="max-width: 100%">
+          <img
+            class="mySlides"
+            src="../../images/space1.jpg"
+            style="width: 100%"
+            padding="0"
+            height="500px"
+          />
+          <img
+            class="mySlides"
+            src="../../images/space3.jpg"
+            style="width: 100%"
+            padding="0"
+            height="500px"
+          />
+          <img
+            class="mySlides"
+            src="../../images/space 4.jpg"
+            style="width: 100%"
+            padding="0"
+            height="500px"
+          />
+          <img
+            class="mySlides"
+            src="../../images/space5.jpg"
+            style="width: 100%"
+            padding="0"
+            height="500px"
+          />
+        </div>
+
+        <h2>Welcome to the Repository of Quality Space Observations</h2>
+        <section>
+        <p>
+            <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br /><a href="/users/login">Discover more <i class="fa fa-arrow-right fa-1x"></i></a>
+        </p>
+        </section>
+        
+
+        <script>
+          var myIndex = 0;
+          carousel();
+
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+              myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+          }
+        </script>
+      </div>
+      <%- include('partials/footer') %>
+    </div>
+  </body>
+</html>

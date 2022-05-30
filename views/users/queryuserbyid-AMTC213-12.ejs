@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <div class="grid">
+        <%- include('partials/banner') %>
+        <%- include('partials/searchbox') %>
+        <%- include('partials/navbar2') %>
+            <div class="content_section">
+                <form action="queryuser" method="post">
+                    <fieldset>
+                        <legend>Query user details from database:</legend>
+                        <p>
+                            <label>Select User</label>
+                            <select name="_id">
+                                <%users.forEach(function(obj){ %>
+                                    <option value="<%=obj._id%>"</option>
+                                    <%=obj.userforename%>
+                                    <%=obj.usersurname%>
+                                <%})%>
+                                </select>
+                        </p>
+                        </p>
+                        <button>Query user</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="footer_section">----</div></div> 
+            </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/clientandsupportnavbar') %>
+            <div class="content_section">
+                <%- include('partials/clientnavbar') %>
+                <form method="post" action="/users/updateclientuser">
+                    
+                    <fieldset>
+                    <!--<legend><b>Select user for update</b></legend>
+                    <p>
+                    <label><b>Select User</b></label>
+                    <select name="_id">
+                    
+                    <option value= "<%=users._id%>"</option>
+                    <%=users.firstName%>
+                    <%=users.lastName%>
+                    
+                    </select>
+                </p>
+            </p>
+            </fieldset>-->
+            <fieldset>
+            <legend><b>Amended details: </b></legend>
+            <p>
+            <p>
+           
+            <label for="firstName"><b>Forename: </b></label>
+            <input id="firstName" name="firstName" required />
+           
+            <label for="lastName"><b>Surname: </b></label>
+            <input id="lastName" name="lastName" required />
+           
+           
+            <label for="userDOB"><b>Date of Birth: </b></label>
+            <input
+            id="userDOB"
+            name="userDOB"
+            type="date"
+            value="1970-01-01"
+            min="1910-01-01"
+            max="2010-01-01"
+            required
+            />
+
+            <label for="address"><b>Address: </b></label>
+            <input type="text" placeholder="Enter full address" name="address" required>
+
+            <label for="gender"><b>Gender</b> </label>
+                        <select name="gender" required>
+                           <option value="Male"> Male</option>
+                           <option value="Female"> Female</option>
+                           <option value="Non-Binary"> Non-Binary</option>
+                        </select>
+           
+            
+            <br /><br />
+            <button>Update user</button>
+            </p>
+        </fieldset>
+    </form>
+   
+            </div>
+            <%- include('partials/footer') %>
+            </div>
+    </div>
+    
+</body>
+</html>

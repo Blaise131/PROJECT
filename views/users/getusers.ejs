@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head2') %>
+   
+<body>
+    <div class="grid">
+        <%- include('partials/clientandsupportnavbar') %>
+        <div class="content_section">
+        <%- include('partials/supportnavbar') %>
+            <fieldset>
+                <legend>User details from database:</legend>
+                <table>
+                    <tr>
+                        <th>_id</th>
+                        <th>firstName</th>
+                        <th>lastName</th>
+                        <th>email</th>
+                        <th>password</th>
+                        <th>address</th>
+                        <th>DOB</th>
+                        <th>gender</th>
+                        <th>category</th>
+                    </tr>
+                    <%users.forEach(function(obj){%>
+                        <tr>
+                            <td><%=obj._id%></td>
+                            <td><%=obj.firstName%></td>
+                            <td><%=obj.lastName%></td>
+                            <td><%=obj.username%></td>
+                            <td><%=obj.password%></td>
+                            <td><%=obj.address%></td>
+                            <td><%=obj.userDOB.toLocaleDateString()%></td>
+                            <td><%=obj.gender%></td>
+                            <td><%=obj.category%></td>
+                        </tr>
+                        <%})%>
+                    </table>
+                </fieldset>
+            </div>
+            <%- include('partials/footer') %>
+        </div>
+</body>
+</html>

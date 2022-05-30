@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/navbar3') %>
+        <div class="content_section">
+            <form action="login" method="get">
+                <fieldset>
+                    <legend></legend>
+                    <p>
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+              
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                        <br /><br /><button type="submit"><b>Login</b></button>
+                        <label>
+
+                        <input type="checkbox"name="remember"> Remember me
+                        </label>
+              
+                        <br /><br /><span class="psw">Forgot <a href="#">password?</a></span>
+                    </p>
+                </fieldset>
+              </form>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+
+    
+    
+</body>
+</html>

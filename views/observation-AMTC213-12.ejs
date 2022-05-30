@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/navbar') %>
+        <div class="content_section">
+            <form action="observation" method="post">
+                <fieldset>
+                    <legend>New Observation</legend>
+                    <p>
+                        <label for="observationID"><b>ObservationID</b></label>
+                        <input placeholder="Enter ID" name="observationID" required>
+              
+                        <label for="firstName"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter first name" name="firstName" required>
+
+                        <label for="lastName"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter last name" name="lastName" required>
+                        
+                        <label for="cordinates"><b>Cordinates</b></label>
+                        <input type="text" placeholder="Enter cordinates" name="cordinates" required>
+                        
+                        <label for="title"><b>Title</b></label>
+                        <input type="text" placeholder="Enter title" name="title" required>
+
+                        <!--upload pictures when making observation-->
+                        <label for="avatar"><b>Upload picture:</b></label>
+                        <!--accept pictures in png format-->
+                        <input type="file" name="avatar" accept="image/png, image/jpeg">
+
+                        <label for="content"><b>Content</b></label>
+                        <textarea name="content" rows="4" cols="50" required>
+                        </textarea>
+
+                        <br /><br /><button type="submit"><b>Save</b></button>
+                        <label>
+
+                    </p>
+                </fieldset>
+              </form>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+
+    
+    
+</body>
+</html>

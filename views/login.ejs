@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/navbar3') %>
+        <div class="content_section">
+            <form action="login" method="POST">
+                <fieldset>
+                    <legend></legend>
+                    <p>
+                        <label for="username"><i class="fa fa-envelope"></i><b> Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+              
+                        <label for="password"><i class="fa fa-key"></i><b> Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+              
+                        <br /><br /><button type="submit"><b>Login</b></button>
+                        <label>
+
+                        <input type="checkbox"name="remember"> Remember me
+                        </label>
+              
+    
+                    </p>
+                </fieldset>
+              </form>
+
+              <fieldset>
+                <p><b>New user?</b><a href="/users/signup"><b> Sign up</b></a></p>
+              </fieldset>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+
+    
+    
+</body>
+</html>

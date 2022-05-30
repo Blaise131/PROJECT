@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/navbar3') %>
+        <div class="content_section">
+            <form action="signup" method="post">
+                <fieldset>
+                    <legend></legend>
+                    <p>
+                        <label for="firstName"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter FirstName" name="firstName" required>
+              
+                        <label for="lastName"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter LastName" name="lastName" required>
+
+                        <label for="username"><b>Email</b></label>
+                        <input type="text" placeholder="something@gmail.com" name="username" required>
+
+                        <!--<label for="email"><b>Confirm Email</b></label>
+                        <input type="text" placeholder="something@gmail.com" name="email" required>-->
+
+                        <label for="password"><b>Password</b></label>
+                        <input id="password" type="text" placeholder="Enter password" name="password" required>
+
+                        <!--<label for="password"><b>Confirm Password</b></label>
+                        <input id="password" type="text" placeholder="Re-enter password" name="password" required>-->
+
+                        <label for="address"><b>Address</b></label>
+                        <input type="text" placeholder="Enter full address" name="address" required>
+
+                        <label for="userDOB"><b>Date of Birth</b></label>
+                        <input 
+                            id="userDOB" 
+                            name="userDOB" 
+                            type="date" 
+                            value="1970-01-01"
+                            min="1910-01-01"
+                            max="2010-01-01"
+                            required
+                        >
+                        <label for="gender"><b>Gender</b> </label>
+                        <select name="gender" required>
+                           <option value="Male"> Male</option>
+                           <option value="Female"> Female</option>
+                           <option value="Non-Binary"> Non-Binary</option>
+                        </select>
+
+                        <label for="category"><b>Category</b> </label>
+                        <select name="category" required>
+                           <option value="Corporate"> Corporate</option>
+                           <option value="Academic"> Academic</option>
+                           <option value="Individual"> Individual</option>
+                        </select>
+
+                        <label for="roles"><b>Role</b> </label>
+                        <select name="roles" required>
+                           <option value="client"> client</option>
+                           <option value="support"> support</option>
+                        </select> 
+
+                        <br /><br />
+                        <label for="terms"><input type="checkbox" name="terms" value="true" required><b> I agree to terms of use</b></label>
+                        </label>
+                        <br /><button type="submit">Sign Up</button>
+                        <label>
+                    </p>
+                </fieldset>
+              </form>
+              <fieldset>
+              <p><b>Have an Account?</b><a href="/users/login"><b> Login</b></a></p>
+            </fieldset>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+
+    
+    
+</body>
+</html>

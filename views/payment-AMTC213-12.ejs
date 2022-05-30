@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head2') %>
+<body>
+    <div class="grid">
+        <%- include('partials/navbar') %>
+        <div class="content_section">
+            <form action="payment" method="post">
+                <fieldset>
+                    <legend>Input payment details</legend>
+                    <p>
+                        <label for="pinNo"><b>Card Number</b></label>
+                        <input type="number" placeholder="Enter 16 digit card number" name="pinNo" required>
+              
+                        <label for="fullName"><b>Name on Card</b></label>
+                        <input type="text" placeholder="Name as it appears on card" name="fullName" required>
+                        
+                        <label for="cvv"><b>CVV</b></label>
+                        <input type="text" placeholder="Enter CVV" name="cvv" >
+
+                        <label for="cardType"><b>Card type</b> </label>
+                        <select name="cardType" required>
+                           <option value="Visa"><i class="fa fa-visa"></i> Visa</option>
+                           <option value="Mastercard"><i class="fa fa-mastercard"></i>Mastercard</option>
+                        </select>
+
+                        <label for="notfnPref"><b>Notification Preference</b> </label>
+                        <select name="notfnPref" required>
+                           <option value="text"><i class="fa fa-message"></i> text</option>
+                           <option value="email"><i class="fa fa-envelope"></i> email</option>
+                        </select>
+
+                        <br /><br /><button type="submit"><b>Save</b></button>
+                        <label>
+
+                    </p>
+                </fieldset>
+              </form>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+
+    
+    
+</body>
+</html>
